@@ -1,0 +1,225 @@
+fileVersion: 1
+id: 4a6e094d-7239-4be0-897e-c50bafd08653
+name: LOAD_COUNTRYCODES_FILE_SOURCES
+operation:
+  database: ""
+  deployEnabled: true
+  description: ""
+  locationName: SRC
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 6e17ff22-4fe0-45cb-8d8f-d20204797c74
+          stepCounter: 4a6e094d-7239-4be0-897e-c50bafd08653
+        config: {}
+        dataType: VARCHAR(64)
+        defaultValue: ""
+        description: ""
+        name: NAME
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: e8e62818-392c-42ae-a74c-e20c4163b847
+          stepCounter: 4a6e094d-7239-4be0-897e-c50bafd08653
+        config: {}
+        dataType: VARCHAR(4)
+        defaultValue: ""
+        description: ""
+        name: ALPHA_2
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 26afff5e-e49f-43eb-b199-36d02535f018
+          stepCounter: 4a6e094d-7239-4be0-897e-c50bafd08653
+        config: {}
+        dataType: VARCHAR(4)
+        defaultValue: ""
+        description: ""
+        name: ALPHA_3
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: dbef8752-3be8-4e03-ad4c-cbaca3a169b5
+          stepCounter: 4a6e094d-7239-4be0-897e-c50bafd08653
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: ""
+        name: COUNTRY_CODE
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: c889500a-37e4-4fe3-8fe3-37911b4bfe57
+          stepCounter: 4a6e094d-7239-4be0-897e-c50bafd08653
+        config: {}
+        dataType: VARCHAR(16)
+        defaultValue: ""
+        description: ""
+        name: ISO_3166_2
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: f4094ef6-3250-4f64-9c01-b446a150ace1
+          stepCounter: 4a6e094d-7239-4be0-897e-c50bafd08653
+        config: {}
+        dataType: VARCHAR(16)
+        defaultValue: ""
+        description: ""
+        name: REGION
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: afc6119e-31ad-4dd3-a88e-b3eaadee2f0e
+          stepCounter: 4a6e094d-7239-4be0-897e-c50bafd08653
+        config: {}
+        dataType: VARCHAR(32)
+        defaultValue: ""
+        description: ""
+        name: SUB_REGION
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: b6ea487e-c290-4f42-bcbd-0221f24ad7b9
+          stepCounter: 4a6e094d-7239-4be0-897e-c50bafd08653
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: ""
+        name: REGION_CODE
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 12a1bf60-cc5a-49fc-92fb-56542c9d5ad7
+          stepCounter: 4a6e094d-7239-4be0-897e-c50bafd08653
+        config: {}
+        dataType: VARCHAR(8)
+        defaultValue: ""
+        description: ""
+        name: SUB_REGION_CODE
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 88919df8-870f-46b4-813a-c12e235f026f
+          stepCounter: 4a6e094d-7239-4be0-897e-c50bafd08653
+        config: {}
+        dataType: VARCHAR(255)
+        defaultValue: ""
+        description: ""
+        name: DSS_RECORD_SOURCE
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: fc604223-76ad-4fc4-a893-4addcf4053ec
+          stepCounter: 4a6e094d-7239-4be0-897e-c50bafd08653
+        config: {}
+        dataType: TIMESTAMP_NTZ(9)
+        defaultValue: ""
+        description: ""
+        name: DSS_LOAD_DATE
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+  name: LOAD_COUNTRYCODES_FILE_SOURCES
+  schema: ""
+  sqlType: Source
+  type: sourceInput
+  version: 1
+type: Node
