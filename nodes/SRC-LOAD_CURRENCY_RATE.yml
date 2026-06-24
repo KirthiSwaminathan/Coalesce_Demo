@@ -1,0 +1,206 @@
+fileVersion: 1
+id: 8f0f7c79-23d7-4246-9bc5-3b8f1b0807ad
+name: LOAD_CURRENCY_RATE
+operation:
+  database: ""
+  deployEnabled: true
+  description: ""
+  locationName: SRC
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 011de37b-3f76-4d52-85e0-7a01675a6f3f
+          stepCounter: 8f0f7c79-23d7-4246-9bc5-3b8f1b0807ad
+        config: {}
+        dataType: VARCHAR(5)
+        defaultValue: ""
+        description: ""
+        name: ORIGINATING_CURRENCY_CODE
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 9f24ce14-ad32-4755-92fe-4b4ddbbd49a2
+          stepCounter: 8f0f7c79-23d7-4246-9bc5-3b8f1b0807ad
+        config: {}
+        dataType: VARCHAR(5)
+        defaultValue: ""
+        description: ""
+        name: DESTINATION_CURRENCY_CODE
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: fee01ad8-f16a-4ced-ba2b-1472412c74c1
+          stepCounter: 8f0f7c79-23d7-4246-9bc5-3b8f1b0807ad
+        config: {}
+        dataType: TIMESTAMP_NTZ(9)
+        defaultValue: ""
+        description: ""
+        name: EFFECTIVE_FROM_DATE
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 51313256-3b7d-41b5-87c2-d1ebd3833136
+          stepCounter: 8f0f7c79-23d7-4246-9bc5-3b8f1b0807ad
+        config: {}
+        dataType: TIMESTAMP_NTZ(9)
+        defaultValue: ""
+        description: ""
+        name: THRU_DATE
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 8c1510f5-0120-411a-9b4e-bd7ec19ebde9
+          stepCounter: 8f0f7c79-23d7-4246-9bc5-3b8f1b0807ad
+        config: {}
+        dataType: NUMBER(18,10)
+        defaultValue: ""
+        description: ""
+        name: EXCHANGE_RATE
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 9bf4e700-a51a-434c-959a-4f8da3786cce
+          stepCounter: 8f0f7c79-23d7-4246-9bc5-3b8f1b0807ad
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: ""
+        name: EXCHANGE_RATE_MULTIPLIER
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: e5d694e6-b5b9-4c4d-8f52-a6b5ad2ecef7
+          stepCounter: 8f0f7c79-23d7-4246-9bc5-3b8f1b0807ad
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: ""
+        name: CREATING_EMPLOYEE_ID
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 48a6ba42-c961-4885-b9e0-5e499adb2b93
+          stepCounter: 8f0f7c79-23d7-4246-9bc5-3b8f1b0807ad
+        config: {}
+        dataType: TIMESTAMP_NTZ(9)
+        defaultValue: ""
+        description: ""
+        name: CREATED_DATETIME
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: acff43bf-0cda-4b48-a775-d1511eaebb5d
+          stepCounter: 8f0f7c79-23d7-4246-9bc5-3b8f1b0807ad
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: ""
+        name: LAST_CHANGE_EMPLOYEE_ID
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 2c031d1e-9a02-45e8-a73e-a33d61353166
+          stepCounter: 8f0f7c79-23d7-4246-9bc5-3b8f1b0807ad
+        config: {}
+        dataType: TIMESTAMP_NTZ(9)
+        defaultValue: ""
+        description: ""
+        name: LAST_CHANGE_DATETIME
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+  name: LOAD_CURRENCY_RATE
+  schema: ""
+  sqlType: Source
+  type: sourceInput
+  version: 1
+type: Node

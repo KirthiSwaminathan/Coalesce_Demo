@@ -1,0 +1,194 @@
+fileVersion: 1
+id: e2643644-43e3-4f89-9475-4fd3fe66c8cc
+name: STG_LOAD_COUNTRYCODES_FILE_SOURCES
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: TARGET
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: b18dea89-7259-43f1-ac8c-c1b5b153548b
+          stepCounter: e2643644-43e3-4f89-9475-4fd3fe66c8cc
+        config: {}
+        dataType: VARCHAR(64)
+        description: ""
+        name: NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 54c91ba5-1df6-4a57-a4e4-c5f8ea21bf3d
+                stepCounter: 58cfe93e-b7b0-44a7-9a8a-dec61b075da4
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: d778c102-91f3-44b7-bcac-5b3b3ee6e4a5
+          stepCounter: e2643644-43e3-4f89-9475-4fd3fe66c8cc
+        config: {}
+        dataType: VARCHAR(4)
+        description: ""
+        name: ALPHA_2
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 208f51a3-a654-493d-99fe-9261526e5cc8
+                stepCounter: 58cfe93e-b7b0-44a7-9a8a-dec61b075da4
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 905754a8-567a-4947-89a6-62b82fd92067
+          stepCounter: e2643644-43e3-4f89-9475-4fd3fe66c8cc
+        config: {}
+        dataType: VARCHAR(4)
+        description: ""
+        name: ALPHA_3
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 9f4434f8-3342-4460-9efd-5304fc44debb
+                stepCounter: 58cfe93e-b7b0-44a7-9a8a-dec61b075da4
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 2be8e086-20bd-4510-a99b-e9d607be0b15
+          stepCounter: e2643644-43e3-4f89-9475-4fd3fe66c8cc
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: COUNTRY_CODE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 6648675d-747d-4674-919d-1925f31a18d3
+                stepCounter: 58cfe93e-b7b0-44a7-9a8a-dec61b075da4
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 9ad4aa10-0f4b-4794-9bf9-71c62f6d24ff
+          stepCounter: e2643644-43e3-4f89-9475-4fd3fe66c8cc
+        config: {}
+        dataType: VARCHAR(16)
+        description: ""
+        name: ISO_3166_2
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 69586793-7806-4628-aba6-df00be75ef7c
+                stepCounter: 58cfe93e-b7b0-44a7-9a8a-dec61b075da4
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 365698db-fb05-4687-a792-218b299b209a
+          stepCounter: e2643644-43e3-4f89-9475-4fd3fe66c8cc
+        config: {}
+        dataType: VARCHAR(16)
+        description: ""
+        name: REGION
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: edfb0ed2-ddb1-4a51-b87c-a00f10cb8038
+                stepCounter: 58cfe93e-b7b0-44a7-9a8a-dec61b075da4
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 282e0909-985d-4454-b0a3-fabc9710f9d1
+          stepCounter: e2643644-43e3-4f89-9475-4fd3fe66c8cc
+        config: {}
+        dataType: VARCHAR(32)
+        description: ""
+        name: SUB_REGION
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 320de0d3-297f-4e42-aaf5-6c5cc438081b
+                stepCounter: 58cfe93e-b7b0-44a7-9a8a-dec61b075da4
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: db7ef0d7-05b8-4159-863e-fe850b517752
+          stepCounter: e2643644-43e3-4f89-9475-4fd3fe66c8cc
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: REGION_CODE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: e694fda5-c22d-409d-9826-08e25660ea25
+                stepCounter: 58cfe93e-b7b0-44a7-9a8a-dec61b075da4
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 329e9542-f724-4e2d-b5a9-ecc2625051e2
+          stepCounter: e2643644-43e3-4f89-9475-4fd3fe66c8cc
+        config: {}
+        dataType: VARCHAR(8)
+        description: ""
+        name: SUB_REGION_CODE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 6eda3781-c85e-41a2-9993-4b0783e64bb7
+                stepCounter: 58cfe93e-b7b0-44a7-9a8a-dec61b075da4
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 3d3b17e4-ba16-4448-b0d5-6952de6ef548
+          stepCounter: e2643644-43e3-4f89-9475-4fd3fe66c8cc
+        config: {}
+        dataType: VARCHAR(255)
+        description: ""
+        name: DSS_RECORD_SOURCE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 5899719c-09cd-4822-8800-004942e8bf2d
+                stepCounter: 58cfe93e-b7b0-44a7-9a8a-dec61b075da4
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: ebf4bbd9-4615-4250-86b8-fe51abb6cc7a
+          stepCounter: e2643644-43e3-4f89-9475-4fd3fe66c8cc
+        config: {}
+        dataType: TIMESTAMP_NTZ(9)
+        description: ""
+        name: DSS_LOAD_DATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 0dc1a787-4fd9-4c17-834e-2e8cddfc67d3
+                stepCounter: 58cfe93e-b7b0-44a7-9a8a-dec61b075da4
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          LOAD_COUNTRYCODES_FILE_SOURCES: 58cfe93e-b7b0-44a7-9a8a-dec61b075da4
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: SRC
+            nodeName: LOAD_COUNTRYCODES_FILE_SOURCES
+        join:
+          joinCondition: FROM {{ ref('SRC', 'LOAD_COUNTRYCODES_FILE_SOURCES') }} "LOAD_COUNTRYCODES_FILE_SOURCES"
+        name: STG_LOAD_COUNTRYCODES_FILE_SOURCES
+        noLinkRefs: []
+  name: STG_LOAD_COUNTRYCODES_FILE_SOURCES
+  overrideSQL: false
+  schema: ""
+  sqlType: Stage
+  type: sql
+  version: 1
+type: Node
