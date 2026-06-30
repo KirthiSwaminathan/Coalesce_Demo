@@ -1,0 +1,285 @@
+fileVersion: 1
+id: a151e7dd-6f46-49fd-993e-01e5d2fadd33
+name: STG_LOAD_ORDER_DETAILS_TRADERS_SOUTH
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: TARGET
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 874ee30b-9c0c-40b2-9023-005acf5d744b
+          stepCounter: a151e7dd-6f46-49fd-993e-01e5d2fadd33
+        config: {}
+        dataType: VARCHAR(255)
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: HK_L_ORDER_DETAILS
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: |-
+              MD5(
+                  COALESCE(TO_VARCHAR(LOAD_ORDERS_TRADERS_SOUTH.ORDERID), 'null')
+                  || '||' ||
+                  COALESCE(LOAD_PRODUCTS_TRADERS_SOUTH."PRODUCTID", 'null')
+              )
+        systemColumnType: None
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 20045ee4-4bec-421d-84fb-8662bb3ed6c3
+          stepCounter: a151e7dd-6f46-49fd-993e-01e5d2fadd33
+        config: {}
+        dataType: VARCHAR(255)
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: HK_H_ORDER
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: |-
+              MD5(
+                  COALESCE(TO_VARCHAR(LOAD_ORDERS_TRADERS_SOUTH.ORDERID), 'null')
+              )
+        systemColumnType: None
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 83f46b78-c3fc-46d0-85f9-825c1552068f
+          stepCounter: a151e7dd-6f46-49fd-993e-01e5d2fadd33
+        config: {}
+        dataType: VARCHAR(255)
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: HK_H_PRODUCT
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: |-
+              MD5(
+                  COALESCE(LOAD_PRODUCTS_TRADERS_SOUTH."PRODUCTID", 'null')
+              )
+        systemColumnType: None
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 88ee7cfc-fbba-4c4d-b97d-b2a8b50deb35
+          stepCounter: a151e7dd-6f46-49fd-993e-01e5d2fadd33
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: ORDERID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 6feb46ab-742e-4140-9971-6c3905794d50
+                stepCounter: 9859d4b8-3adc-4b6d-8619-f2c0d9873193
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: e2de14eb-b56e-4841-b29b-8da4b375d489
+          stepCounter: a151e7dd-6f46-49fd-993e-01e5d2fadd33
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: ORDERLINENUMBER
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 8ea7bacd-9070-4a77-a904-8c8a2772d798
+                stepCounter: 9859d4b8-3adc-4b6d-8619-f2c0d9873193
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: cb39b5ba-5a95-4e50-a23d-684be4de218e
+          stepCounter: a151e7dd-6f46-49fd-993e-01e5d2fadd33
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: PRODUCTID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: b34ae30b-9bf6-4b6a-a247-1be4d0345685
+                stepCounter: 9859d4b8-3adc-4b6d-8619-f2c0d9873193
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 551274cf-6dee-47ea-8f0a-d22e0cb41909
+          stepCounter: a151e7dd-6f46-49fd-993e-01e5d2fadd33
+        config: {}
+        dataType: NUMBER(19,4)
+        description: ""
+        name: UNITPRICE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 6579a877-9444-4c03-8d2a-023d47b6efc8
+                stepCounter: 9859d4b8-3adc-4b6d-8619-f2c0d9873193
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 4e8c7519-62ce-49bc-9094-84331741cdb5
+          stepCounter: a151e7dd-6f46-49fd-993e-01e5d2fadd33
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: QUANTITY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: ff5f7602-15e7-4c6f-8d67-37a0b6f14f03
+                stepCounter: 9859d4b8-3adc-4b6d-8619-f2c0d9873193
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: a724eed3-b83c-4996-b28d-0b1015924238
+          stepCounter: a151e7dd-6f46-49fd-993e-01e5d2fadd33
+        config: {}
+        dataType: FLOAT
+        description: ""
+        name: DISCOUNT
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 659899b5-244b-49f3-8d5c-6954eb203319
+                stepCounter: 9859d4b8-3adc-4b6d-8619-f2c0d9873193
+            transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 94573580-9fca-4b26-a27e-029184efba8b
+          stepCounter: a151e7dd-6f46-49fd-993e-01e5d2fadd33
+        config: {}
+        dataType: VARCHAR(255)
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: DSS_CHANGE_HASH_ORDER_DETAILS_TRANSACT_TRADERS_SOUTH
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: |-
+              MD5(
+                  COALESCE(TO_VARCHAR(LOAD_ORDERS_TRADERS_SOUTH.ORDERDATE), 'null')
+                  || '||' ||
+                  COALESCE(TO_VARCHAR(LOAD_ORDER_DETAILS_TRADERS_SOUTH.UNITPRICE), 'null')
+                  || '||' ||
+                  COALESCE(TO_VARCHAR(LOAD_ORDER_DETAILS_TRADERS_SOUTH.QUANTITY), 'null')
+                  || '||' ||
+                  COALESCE(TO_VARCHAR(LOAD_ORDER_DETAILS_TRADERS_SOUTH.DISCOUNT), 'null')
+              )
+        systemColumnType: None
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 83c2ab68-eb3f-4ae4-a5cb-0981befbb0d5
+          stepCounter: a151e7dd-6f46-49fd-993e-01e5d2fadd33
+        config: {}
+        dataType: VARCHAR(255)
+        description: ""
+        name: DSS_RECORD_SOURCE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 1a2be733-5f81-4811-88d8-14179f298513
+                stepCounter: 9859d4b8-3adc-4b6d-8619-f2c0d9873193
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 90867865-8af9-48e0-8b4c-6437ec3ad425
+          stepCounter: a151e7dd-6f46-49fd-993e-01e5d2fadd33
+        config: {}
+        dataType: TIMESTAMP_NTZ(9)
+        description: ""
+        name: DSS_LOAD_DATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 437001f8-04ae-4c8f-9e3f-234ab20218e7
+                stepCounter: 9859d4b8-3adc-4b6d-8619-f2c0d9873193
+            transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: e7235275-2de7-4c48-b969-f78ba37e8a5a
+          stepCounter: a151e7dd-6f46-49fd-993e-01e5d2fadd33
+        config: {}
+        dataType: TIMESTAMP_NTZ(9)
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: DSS_CREATE_TIME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: CURRENT_TIMESTAMP()
+        systemColumnType: None
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          LOAD_ORDERS_TRADERS_SOUTH: 820c40ee-4ab3-4fca-b5ec-ff95c34544b8
+          LOAD_ORDER_DETAILS_TRADERS_SOUTH: 9859d4b8-3adc-4b6d-8619-f2c0d9873193
+          LOAD_PRODUCTS_TRADERS_SOUTH: 75edcc9e-d694-4eb5-9f3e-0ca1095bd3d3
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: SRC
+            nodeName: LOAD_ORDER_DETAILS_TRADERS_SOUTH
+          - locationName: SRC
+            nodeName: LOAD_ORDERS_TRADERS_SOUTH
+          - locationName: SRC
+            nodeName: LOAD_PRODUCTS_TRADERS_SOUTH
+        join:
+          joinCondition: |-
+            FROM {{ ref('SRC', 'LOAD_ORDER_DETAILS_TRADERS_SOUTH') }} "LOAD_ORDER_DETAILS_TRADERS_SOUTH"
+            INNER JOIN
+            {{ ref('SRC', 'LOAD_ORDERS_TRADERS_SOUTH') }} "LOAD_ORDERS_TRADERS_SOUTH"
+            ON LOAD_ORDER_DETAILS_TRADERS_SOUTH.ORDERID = LOAD_ORDERS_TRADERS_SOUTH.ORDERID
+            INNER JOIN
+            {{ ref('SRC', 'LOAD_PRODUCTS_TRADERS_SOUTH') }} "LOAD_PRODUCTS_TRADERS_SOUTH"
+            ON LOAD_ORDER_DETAILS_TRADERS_SOUTH.PRODUCTID = LOAD_PRODUCTS_TRADERS_SOUTH.PRODUCTID
+        name: STG_LOAD_ORDER_DETAILS_TRADERS_SOUTH
+        noLinkRefs: []
+  name: STG_LOAD_ORDER_DETAILS_TRADERS_SOUTH
+  overrideSQL: false
+  schema: ""
+  sqlType: Stage
+  type: sql
+  version: 1
+type: Node

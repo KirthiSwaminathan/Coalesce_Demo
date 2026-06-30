@@ -1,0 +1,418 @@
+fileVersion: 1
+id: 679977af-ec25-4920-8247-51aa9db68ad0
+name: STAGE_ORDERS_SHIPPERS_EMPLOYEES_CUSTOMERS_TRADERS_NORTH
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: TARGET
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: d84db813-0b36-4e69-a9b5-735682872264
+          stepCounter: 679977af-ec25-4920-8247-51aa9db68ad0
+        config: {}
+        dataType: VARCHAR(255)
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: HK_L_ORDERS_SHIPPERS_EMPLOYEES_CUSTOMERS
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: |-
+              MD5(
+                  COALESCE(LOAD_CUSTOMERS_TRADERS_NORTH.COMPANYNAME, 'null')
+                  || '||' ||
+                  COALESCE(TO_VARCHAR(LOAD_ORDERS_TRADERS_NORTH.EMPLOYEEID), 'null')
+                  || '||' ||
+                  COALESCE(TO_VARCHAR(LOAD_ORDERS_TRADERS_NORTH.ORDERID), 'null')
+                  || '||' ||
+                  COALESCE(LOAD_SHIPPERS_TRADERS_NORTH.COMPANYNAME, 'null')
+              )
+        systemColumnType: None
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 3f9c1e77-f4e2-4cd0-b77f-2d158eb9f18c
+          stepCounter: 679977af-ec25-4920-8247-51aa9db68ad0
+        config: {}
+        dataType: VARCHAR(255)
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: HK_H_CUSTOMER
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: |-
+              MD5(
+                  COALESCE(LOAD_CUSTOMERS_TRADERS_NORTH.COMPANYNAME, 'null')
+              )
+        systemColumnType: None
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: a014eaf0-1ee8-4971-a729-6805c71d6441
+          stepCounter: 679977af-ec25-4920-8247-51aa9db68ad0
+        config: {}
+        dataType: VARCHAR(255)
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: HK_H_EMPLOYEE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: |-
+              MD5(
+                  COALESCE(TO_VARCHAR(LOAD_ORDERS_TRADERS_NORTH.EMPLOYEEID), 'null')
+              )
+        systemColumnType: None
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: f0306ae2-1008-4ec4-b30b-bcfcaa852131
+          stepCounter: 679977af-ec25-4920-8247-51aa9db68ad0
+        config: {}
+        dataType: VARCHAR(255)
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: HK_H_ORDER
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: |-
+              MD5(
+                  COALESCE(TO_VARCHAR(LOAD_ORDERS_TRADERS_NORTH.ORDERID), 'null')
+              )
+        systemColumnType: None
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: b5b74619-cc33-4643-bc38-bcb030b38e25
+          stepCounter: 679977af-ec25-4920-8247-51aa9db68ad0
+        config: {}
+        dataType: VARCHAR(255)
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: HK_H_SHIPPER
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: |-
+              MD5(
+                  COALESCE(LOAD_SHIPPERS_TRADERS_NORTH.COMPANYNAME, 'null')
+              )
+        systemColumnType: None
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 4dade993-3f64-4e0b-af8d-ac3d0f3c0c43
+          stepCounter: 679977af-ec25-4920-8247-51aa9db68ad0
+        config: {}
+        dataType: VARCHAR(5)
+        description: ""
+        name: CUSTOMERID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: f547a63d-3165-4d81-97cb-2a153cb2bdbb
+                stepCounter: 75bd2cd0-4b10-4ae3-90a0-7326b6e79d7f
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 6a42a708-50d0-4a18-a000-b4aecc0f1612
+          stepCounter: 679977af-ec25-4920-8247-51aa9db68ad0
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: EMPLOYEEID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: d2f2e6d4-9c08-4dcd-b900-42adadcbc9c0
+                stepCounter: 75bd2cd0-4b10-4ae3-90a0-7326b6e79d7f
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 683cba2d-256d-403b-a436-ee057c421f44
+          stepCounter: 679977af-ec25-4920-8247-51aa9db68ad0
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: ORDER_NUMBER
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 165863b9-4ebe-49ba-96d3-73d28ae69e45
+                stepCounter: 75bd2cd0-4b10-4ae3-90a0-7326b6e79d7f
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: c78e6c19-88bf-494b-a61b-f713295120b2
+          stepCounter: 679977af-ec25-4920-8247-51aa9db68ad0
+        config: {}
+        dataType: TIMESTAMP_NTZ(9)
+        description: ""
+        name: ORDERDATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 2d914428-51f9-4848-a146-154b0f48ab35
+                stepCounter: 75bd2cd0-4b10-4ae3-90a0-7326b6e79d7f
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 593b691c-de2f-483c-9672-c1970d535690
+          stepCounter: 679977af-ec25-4920-8247-51aa9db68ad0
+        config: {}
+        dataType: TIMESTAMP_NTZ(9)
+        description: ""
+        name: REQUIREDDATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 62f4c9f3-f4bc-4f33-af84-b21d2defc0ad
+                stepCounter: 75bd2cd0-4b10-4ae3-90a0-7326b6e79d7f
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 43fd55c1-315f-477f-afc1-2b602c79d896
+          stepCounter: 679977af-ec25-4920-8247-51aa9db68ad0
+        config: {}
+        dataType: TIMESTAMP_NTZ(9)
+        description: ""
+        name: SHIPPEDDATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 97066bbd-6339-4079-a1a4-deff86fedd53
+                stepCounter: 75bd2cd0-4b10-4ae3-90a0-7326b6e79d7f
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 10c92e55-496e-4f79-a848-66290c8f6226
+          stepCounter: 679977af-ec25-4920-8247-51aa9db68ad0
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: SHIPVIA
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 14e4f135-fc66-4d8b-bded-64da7d502697
+                stepCounter: 75bd2cd0-4b10-4ae3-90a0-7326b6e79d7f
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: d7e8acad-c933-4516-a705-aacfe76a2a8f
+          stepCounter: 679977af-ec25-4920-8247-51aa9db68ad0
+        config: {}
+        dataType: NUMBER(19,4)
+        description: ""
+        name: FREIGHT
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 77403633-07a9-4a6c-a501-47a4e99b03b6
+                stepCounter: 75bd2cd0-4b10-4ae3-90a0-7326b6e79d7f
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 787ca5b7-cd97-4e62-bdc8-af1e6a4aea5a
+          stepCounter: 679977af-ec25-4920-8247-51aa9db68ad0
+        config: {}
+        dataType: VARCHAR(40)
+        description: ""
+        name: SHIPNAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: d9a3d962-ec52-4a4c-95d4-3143b68f597a
+                stepCounter: 75bd2cd0-4b10-4ae3-90a0-7326b6e79d7f
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: a5e9bdae-7046-4b1a-b8c4-bcd1397e0877
+          stepCounter: 679977af-ec25-4920-8247-51aa9db68ad0
+        config: {}
+        dataType: VARCHAR(60)
+        description: ""
+        name: SHIPADDRESS
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 511eda93-7e59-4b45-8ccb-003af577a4cb
+                stepCounter: 75bd2cd0-4b10-4ae3-90a0-7326b6e79d7f
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: f9476cb9-ffd9-4791-a6e2-32e1c3c4221e
+          stepCounter: 679977af-ec25-4920-8247-51aa9db68ad0
+        config: {}
+        dataType: VARCHAR(15)
+        description: ""
+        name: SHIPCITY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: f496d941-9920-4bef-bd72-20e678a7ef4e
+                stepCounter: 75bd2cd0-4b10-4ae3-90a0-7326b6e79d7f
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: e3a4cf54-a67c-47a1-95fa-efb91c0ca206
+          stepCounter: 679977af-ec25-4920-8247-51aa9db68ad0
+        config: {}
+        dataType: VARCHAR(15)
+        description: ""
+        name: SHIPREGION
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 71966574-f47e-4720-aacb-1e34ead05dd0
+                stepCounter: 75bd2cd0-4b10-4ae3-90a0-7326b6e79d7f
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1edca4b9-c451-4737-a9b2-303743d94518
+          stepCounter: 679977af-ec25-4920-8247-51aa9db68ad0
+        config: {}
+        dataType: VARCHAR(10)
+        description: ""
+        name: SHIPPOSTALCODE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 78b50a24-00be-4cf4-ab94-ce2b29fc56b6
+                stepCounter: 75bd2cd0-4b10-4ae3-90a0-7326b6e79d7f
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 254a4c0c-94e8-4634-a22c-d0ffeee6a0b7
+          stepCounter: 679977af-ec25-4920-8247-51aa9db68ad0
+        config: {}
+        dataType: VARCHAR(15)
+        description: ""
+        name: SHIPCOUNTRY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 6d8c0826-0304-40d2-80f5-7db7d37a05e4
+                stepCounter: 75bd2cd0-4b10-4ae3-90a0-7326b6e79d7f
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: eb9ffd9d-b502-40b5-ac5f-08d7deb6c528
+          stepCounter: 679977af-ec25-4920-8247-51aa9db68ad0
+        config: {}
+        dataType: VARCHAR(255)
+        description: ""
+        name: DSS_RECORD_SOURCE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 1eff52dc-1f57-4a5e-854f-3796a2c22275
+                stepCounter: 75bd2cd0-4b10-4ae3-90a0-7326b6e79d7f
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: dc5ddf18-b29c-4cb8-9044-4839c056de0f
+          stepCounter: 679977af-ec25-4920-8247-51aa9db68ad0
+        config: {}
+        dataType: TIMESTAMP_NTZ(9)
+        description: ""
+        name: DSS_LOAD_DATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: b57409f0-f071-40b3-ac49-af17bd9ceee0
+                stepCounter: 75bd2cd0-4b10-4ae3-90a0-7326b6e79d7f
+            transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 54e970be-d14c-414c-a916-ed535d8e33a5
+          stepCounter: 679977af-ec25-4920-8247-51aa9db68ad0
+        config: {}
+        dataType: TIMESTAMP_NTZ(9)
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: DSS_CREATE_TIME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: CURRENT_TIMESTAMP()
+        systemColumnType: None
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          LOAD_CUSTOMERS_TRADERS_NORTH: 172b83a3-1b51-423b-8cab-41137a0be2b8
+          LOAD_ORDERS_TRADERS_NORTH: 75bd2cd0-4b10-4ae3-90a0-7326b6e79d7f
+          LOAD_SHIPPERS_TRADERS_NORTH: 3cb9ad53-9e8e-4988-b76b-e372634a80c9
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: SRC
+            nodeName: LOAD_CUSTOMERS_TRADERS_NORTH
+          - locationName: SRC
+            nodeName: LOAD_ORDERS_TRADERS_NORTH
+          - locationName: SRC
+            nodeName: LOAD_SHIPPERS_TRADERS_NORTH
+        join:
+          joinCondition: |-
+            FROM {{ ref('SRC', 'LOAD_ORDERS_TRADERS_NORTH') }} "LOAD_ORDERS_TRADERS_NORTH"
+
+            INNER JOIN {{ ref('SRC', 'LOAD_SHIPPERS_TRADERS_NORTH') }} LOAD_SHIPPERS_TRADERS_NORTH
+                ON LOAD_ORDERS_TRADERS_NORTH.SHIPVIA = LOAD_SHIPPERS_TRADERS_NORTH.SHIPPERID
+
+            INNER JOIN {{ ref('SRC', 'LOAD_CUSTOMERS_TRADERS_NORTH') }} LOAD_CUSTOMERS_TRADERS_NORTH
+                ON LOAD_ORDERS_TRADERS_NORTH.CUSTOMERID = LOAD_CUSTOMERS_TRADERS_NORTH.CUSTOMERID
+        name: STAGE_ORDERS_SHIPPERS_EMPLOYEES_CUSTOMERS_TRADERS_NORTH
+        noLinkRefs: []
+  name: STAGE_ORDERS_SHIPPERS_EMPLOYEES_CUSTOMERS_TRADERS_NORTH
+  overrideSQL: false
+  schema: ""
+  sqlType: Stage
+  type: sql
+  version: 1
+type: Node
